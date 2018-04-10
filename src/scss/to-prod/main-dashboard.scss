@@ -1,0 +1,20 @@
+
+@import '../components/colors';
+
+@import 'reset';
+@import 'base';
+
+// components
+
+@import '../components/typography';
+@import '../components/utils';
+@import '../components/card';
+@import '../components/form_input';
+@import '../components/buttons';
+@import '../components/navigation';
+@import '../components/post';
+@import '../components/table';
+
+// pages
+@import '../pages/login_page';
+@import '../pages/home_page';

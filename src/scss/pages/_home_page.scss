@@ -1,0 +1,23 @@
+.home-page {
+  @extend .page-width;
+}
+
+.home-page__posts {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-page__transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.home-page__transactions-title {
+  @extend .page-title;
+}
+
+.home-page__new-transaction {
+  color: $red;
+}

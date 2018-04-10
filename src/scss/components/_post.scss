@@ -1,0 +1,19 @@
+
+.post {
+  @extend .card;
+  border-top: 0;
+
+  &:first-child {
+    border-top: 1px solid #ddd;
+  }
+}
+
+.post-title {
+  text-align: left;
+  font-weight: bold;
+}
+
+.post-body {
+  margin-top: 10px;
+  text-align: left;
+}

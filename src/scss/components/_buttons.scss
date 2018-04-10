@@ -1,0 +1,51 @@
+
+.button {
+  padding: 15px 30px 16px;
+  border: 0;
+  border-radius: 5px;
+  background: white;
+  color: lighten(red, 5%);
+  font-weight: bold;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    color: darken(red, 10%);
+    cursor: pointer;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.2);
+
+    transition: color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  &:active {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    color: darken(red, 10%);
+    transition: color 0.15s ease, box-shadow 0.15s ease;
+  }
+}
+
+.red-button {
+  @extend .button;
+  background: $red;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px 0 lighten($red, 20%);
+
+  &:hover {
+    color: white;
+    background: darken($red, 5%);
+    box-shadow: 0 9px 12px 0 lighten($red, 20%);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  &:active {
+    color: white;
+    background: darken($red, 5%);
+    box-shadow: 0 1px 5px 0 lighten($red, 20%);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+  }
+}

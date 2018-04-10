@@ -1,0 +1,141 @@
+
+
+
+$background-color: #f3f5f6;
+$text-color: #42464A;
+$text-color-light-1: #5D6369;
+$text-color-light-2: #797F85;
+$white-hover-color: #F3f5f6;
+
+$light-gray-5: #E8ECED;
+$light-gray-4: #D9DCDE;
+
+$selected-green: #00C1C4;
+$selected-green-dark-1: #00949C;
+$site-purple: #A700D1;
+$site-purple-light-1: #C94FE8;
+
+@import '../components/colors';
+
+$one-px: 0.06250rem;
+@function px($pixels) {
+  @return ($one-px * $pixels);
+}
+
+// pages
+%overflow-content {
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.home-page {
+  @extend %overflow-content;
+}
+
+.linked-page .page-content {
+  @extend %overflow-content;
+}
+
+.chat-page .messages {
+  @extend %overflow-content;
+}
+
+.objective-page {
+  @extend %overflow-content;
+}
+
+.timeline-page {
+  @extend %overflow-content;
+}
+
+.therapist-page {
+  @extend %overflow-content;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+
+  // https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+  // 350 ms wait for double tap detection is disabled with this property
+  // so single taps are handled quickly
+  touch-action: manipulation;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  // background-color: #e9ebee;
+  background: #eff0f3;
+  background: #f1f4f7;
+  // background: linear-gradient(45deg, $navigation-blue, $navigation-green);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p,
+div,
+span,
+img,
+section,
+a,
+button {
+  color: $text-color;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: darken($red, 20%);
+    transition: color 0.15s ease;
+  }
+}
+
+#entry-point {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.app-layout {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-navigation {
+  flex-shrink: 0;
+}
+
+.app-body {
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
